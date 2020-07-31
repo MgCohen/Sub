@@ -28,6 +28,12 @@ public class Ship : MonoBehaviour
     public Radio radio;
     public Repair repair;
 
+    public Stations selectedStation;
+
+    public void SelectStation()
+    {
+        //se ja tem selecionado, cancela
+    }
     private void Start()
     {
         SetStations();
@@ -71,9 +77,5 @@ public class Ship : MonoBehaviour
     }
 
 
-    public void Clock()
-    {
-        //move
-    }
 
 }

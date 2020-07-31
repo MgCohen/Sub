@@ -7,8 +7,8 @@ public class Engine : Stations
 
     public Vector2 targetCoordinates;
 
-    public void Move()
+    public override void Act(int value)
     {
-
+        //mover x(value) na direção do target
     }
 }

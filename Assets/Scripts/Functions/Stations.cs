@@ -37,6 +37,12 @@ public class Stations : MonoBehaviour, IClock
         Spend();
     }
 
+    public virtual void Target()
+    {
+        //logica
+        Activate();
+    }
+
     public bool Spend()
     {
         foreach(var c in stationedCrew)
