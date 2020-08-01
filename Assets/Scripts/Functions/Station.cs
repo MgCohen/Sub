@@ -42,7 +42,7 @@ public class Station : MonoBehaviour, IClock
 
     public virtual void StartTarget()
     {
-        if (StationManager.SelectedStation == this) { ReleaseTarget(); return;}
+        if (Manager.SelectedStation == this) { ReleaseTarget(); return;}
         
         Manager.SetSelectedStation(this);
         Manager.Input.Aim();
@@ -50,7 +50,7 @@ public class Station : MonoBehaviour, IClock
 
     public virtual void ReleaseTarget()
     {
-        if (StationManager.SelectedStation != this) return;
+        if (Manager.SelectedStation != this) return;
         
         Manager.DesselectStation();
         Manager.Input.ReleaseAim();

@@ -17,6 +17,6 @@ public abstract class TargetableMapPoint : MonoBehaviour, IInteractableMapPoint
 
   public virtual void OnTarget()
   {
-    StationManager.SelectedStation?.ActivateOn(this);
+    //StationManager.Singleton.ActivateSelectedOn(this);
   }
 }

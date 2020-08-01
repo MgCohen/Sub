@@ -16,42 +16,20 @@ public class Ship : MonoBehaviour
     public int structureDamage;
 
     public Vector2 Coordinates;
-
     public int noise;
-
     public int gold;
+    [SerializeField] private StationManager _stationManager;
 
-    public List<Station> Stations;
-    public Engine engine;
-    public Weapons weapons;
-    public Sonar sonar;
-    public Radio radio;
-    public Repair repair;
-
-    public Station SelectedStation;
-
-    public void SelectStation()
+    private void OnValidate()
     {
-        //se ja tem selecionado, cancela
+        _stationManager = GetComponentInChildren<StationManager>();
+        _stationManager?.SetStations(this);
     }
     private void Start()
     {
-        SetStations();
     }
 
-    public void SetStations()
-    {
-        engine = GetComponent<Engine>();
-        engine.Ship = this;
-        weapons = GetComponent<Weapons>();
-        weapons.Ship = this;
-        sonar = GetComponent<Sonar>();
-        sonar.Ship = this;
-        radio = GetComponent<Radio>();
-        radio.Ship = this;
-        repair = GetComponent<Repair>();
-        repair.Ship = this;
-    }
+  
 
     public void TakeDamage(int amount)
     {
