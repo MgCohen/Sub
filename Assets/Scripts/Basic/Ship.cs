@@ -21,14 +21,14 @@ public class Ship : MonoBehaviour
 
     public int gold;
 
-    public List<Stations> Stations;
+    public List<Station> Stations;
     public Engine engine;
     public Weapons weapons;
     public Sonar sonar;
     public Radio radio;
     public Repair repair;
 
-    public Stations selectedStation;
+    public Station SelectedStation;
 
     public void SelectStation()
     {
@@ -42,15 +42,15 @@ public class Ship : MonoBehaviour
     public void SetStations()
     {
         engine = GetComponent<Engine>();
-        engine.ship = this;
+        engine.Ship = this;
         weapons = GetComponent<Weapons>();
-        weapons.ship = this;
+        weapons.Ship = this;
         sonar = GetComponent<Sonar>();
-        sonar.ship = this;
+        sonar.Ship = this;
         radio = GetComponent<Radio>();
-        radio.ship = this;
+        radio.Ship = this;
         repair = GetComponent<Repair>();
-        repair.ship = this;
+        repair.Ship = this;
     }
 
     public void TakeDamage(int amount)

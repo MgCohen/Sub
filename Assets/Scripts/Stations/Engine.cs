@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Engine : Stations
+public class Engine : Station
 {
 
     public Vector2 targetCoordinates;

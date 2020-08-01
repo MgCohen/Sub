@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sonar : Stations
+public class Sonar : Station
 {
 
 }
