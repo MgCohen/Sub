@@ -5,7 +5,11 @@ using UnityEngine.EventSystems;
 
 public abstract class TargetableMapPoint : MonoBehaviour, IInteractableMapPoint
 {
-  
+
+  private void Start()
+  {
+    GetComponent<SpriteRenderer>().color = Color.yellow;
+  }
   public virtual void OnSelect()
   {
     if (InputManager.IsAiming)

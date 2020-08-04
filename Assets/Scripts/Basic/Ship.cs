@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,6 +21,7 @@ public class Ship : MonoBehaviour
     public int gold;
     [SerializeField] private StationManager _stationManager;
 
+
     private void OnValidate()
     {
         _stationManager = GetComponentInChildren<StationManager>();
@@ -27,9 +29,9 @@ public class Ship : MonoBehaviour
     }
     private void Start()
     {
+       
     }
 
-  
 
     public void TakeDamage(int amount)
     {

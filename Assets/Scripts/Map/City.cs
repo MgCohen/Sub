@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class City : TargetableMapPoint
 {
+    
+    
     public override void OnSelect()
     {
         base.OnSelect();
