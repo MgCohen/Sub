@@ -9,6 +9,7 @@ public class City : TargetableMapPoint
     public override void OnSelect()
     {
         base.OnSelect();
+        Debug.Log(name);
     }
 
     public override void OnTarget()
