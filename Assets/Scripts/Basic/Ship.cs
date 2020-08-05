@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,42 +17,21 @@ public class Ship : MonoBehaviour
     public int structureDamage;
 
     public Vector2 Coordinates;
-
     public int noise;
-
     public int gold;
+    [SerializeField] private StationManager _stationManager;
 
-    public List<Stations> Stations;
-    public Engine engine;
-    public Weapons weapons;
-    public Sonar sonar;
-    public Radio radio;
-    public Repair repair;
 
-    public Stations selectedStation;
-
-    public void SelectStation()
+    private void OnValidate()
     {
-        //se ja tem selecionado, cancela
+        _stationManager = GetComponentInChildren<StationManager>();
+        _stationManager?.SetStations(this);
     }
     private void Start()
     {
-        SetStations();
+       
     }
 
-    public void SetStations()
-    {
-        engine = GetComponent<Engine>();
-        engine.ship = this;
-        weapons = GetComponent<Weapons>();
-        weapons.ship = this;
-        sonar = GetComponent<Sonar>();
-        sonar.ship = this;
-        radio = GetComponent<Radio>();
-        radio.ship = this;
-        repair = GetComponent<Repair>();
-        repair.ship = this;
-    }
 
     public void TakeDamage(int amount)
     {
