@@ -36,8 +36,6 @@ public class TouchArea : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
     if (!_isHovering) return;
 
     Coordinates = MousePosition - transform.position.RoundToInt();
-    // cursor.position = MousePosition;
-
     SelectedPoint = FindTarget(MousePosition);
 
   }
