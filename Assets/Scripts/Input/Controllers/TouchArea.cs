@@ -6,15 +6,16 @@ using UnityEngine.EventSystems;
 
 public class TouchArea : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 {
+  [SerializeField] private Map    _behaviourHandler;
   [SerializeField] private Camera _targetCamera;
-  public Vector2 Coordinates;
-  public TargetableMapPoint SelectedPoint;
   private bool _isHovering;
   private Vector2 MousePosition => _targetCamera.ScreenToWorldPoint(Input.mousePosition).RoundToInt() + Vector2.one * 0.5f;
-
+  
+  
   private void OnValidate()
   {
     if (!_targetCamera) _targetCamera = Camera.main;
+    if (!_behaviourHandler) _behaviourHandler = GetComponent<Map>();
   }
   
   public void OnPointerEnter(PointerEventData eventData)
@@ -24,8 +25,10 @@ public class TouchArea : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
 
   public void OnPointerExit(PointerEventData eventData)
   {
-    SelectedPoint = FindTarget(MousePosition);
-    if (SelectedPoint != null) return;
+    var point = FindTarget(MousePosition);
+    _behaviourHandler?.SetTarget(point);
+    
+    if (point != null) return;
     _isHovering = false;
   }
 
@@ -34,10 +37,13 @@ public class TouchArea : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
   private void Update()
   {
     if (!_isHovering) return;
-
-    Coordinates = MousePosition - transform.position.RoundToInt();
-    SelectedPoint = FindTarget(MousePosition);
-
+    
+    var point = FindTarget(MousePosition);
+    var coords = MousePosition - transform.position.RoundToInt();
+    
+    _behaviourHandler?.SetCoordinates(coords);
+    _behaviourHandler?.SetTarget(point); 
+    
   }
 
   private static TargetableMapPoint FindTarget(Vector2 mousePos)

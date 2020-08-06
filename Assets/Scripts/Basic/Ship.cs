@@ -19,13 +19,13 @@ public class Ship : MonoBehaviour
     public Vector2 Coordinates;
     public int noise;
     public int gold;
-    [SerializeField] private StationManager _stationManager;
+    public StationManager StationManager;
 
 
     private void OnValidate()
     {
-        _stationManager = GetComponentInChildren<StationManager>();
-        _stationManager?.SetStations(this);
+        StationManager = GetComponentInChildren<StationManager>();
+        StationManager?.SetStations(this);
     }
     private void Start()
     {

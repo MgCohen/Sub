@@ -6,14 +6,14 @@ public class City : TargetableMapPoint
 {
     
     
-    public override void OnSelect()
+    public override void Select()
     {
-        base.OnSelect();
+        base.Select();
         Debug.Log(name);
     }
 
-    public override void OnTarget()
+    public override void Target()
     {
-        base.OnTarget();
+        base.Target();
     }
 }
