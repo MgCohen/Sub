@@ -10,16 +10,16 @@ public abstract class TargetableMapPoint : MonoBehaviour, IInteractableMapPoint
   {
     GetComponent<SpriteRenderer>().color = Color.yellow;
   }
-  public virtual void OnSelect()
+  public virtual void Select()
   {
     if (InputManager.IsAiming)
     {
-      OnTarget();
+      Target();
       return;
     }
   }
 
-  public virtual void OnTarget()
+  public virtual void Target()
   {
     //StationManager.Singleton.ActivateSelectedOn(this);
   }

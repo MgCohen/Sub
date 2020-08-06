@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IInteractableMapPoint
 {
-    void OnSelect();
+    void Select();
 }

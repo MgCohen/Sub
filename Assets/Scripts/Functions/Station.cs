@@ -33,11 +33,19 @@ public class Station : MonoBehaviour, IClock
     public virtual void ActivateOn(TargetableMapPoint point)
     {
         Debug.Log(GetType() + " on " + point.name);
+        Activate();
+    }
+
+    public virtual void ActivateOn(Vector2 coords)
+    {
+        Debug.Log(GetType() + " on (" + coords.x + "," + coords.y + ")");
+        Activate();
     }
 
     public virtual void Activate()
     {
         Spend();
+        ReleaseTarget();
     }
 
     public virtual void StartTarget()
