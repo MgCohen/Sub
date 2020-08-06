@@ -1,0 +1,53 @@
+fileFormatVersion: 2
+guid: 01be5ad7b192f034dbb213db68ae4ed9
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: EightBit Atari
+  fontNames:
+  - EightBit Atari
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d07f07314ca521540862c5bf022008ac, type: 3}
+  - {fileID: 12800000, guid: 80c3bb71fcd460942ac8dde4b1aa485d, type: 3}
+  - {fileID: 12800000, guid: d0ddbe72a03dfbd41a17b828afc28170, type: 3}
+  - {fileID: 12800000, guid: 6007ab436c86dc84ca158c22cf8ccb7b, type: 3}
+  - {fileID: 12800000, guid: 8069d353a39fc004bb25b311bcf8ee49, type: 3}
+  - {fileID: 12800000, guid: 906d7b933ecfaff44846641c7d67c406, type: 3}
+  - {fileID: 12800000, guid: c071ff44e69aab74c8eba351aaba726b, type: 3}
+  - {fileID: 12800000, guid: 90f22274b9074764ea33e1aacc91f80d, type: 3}
+  - {fileID: 12800000, guid: 107fe6b433958424780c153b5dade7ab, type: 3}
+  - {fileID: 12800000, guid: 2021bac459c8743449b2c32bbbbdc8ff, type: 3}
+  - {fileID: 12800000, guid: 000c9f458e336964986f91d829f6495e, type: 3}
+  - {fileID: 12800000, guid: b0a16965a59e8c548bbef917f22b1c4d, type: 3}
+  - {fileID: 12800000, guid: 406d81758e682e84c91d6d51df436ff2, type: 3}
+  - {fileID: 12800000, guid: c05810c58fa617f4194f6b4f64a4791f, type: 3}
+  - {fileID: 12800000, guid: 80c38126d85f88a44b4dfe89b5da494b, type: 3}
+  - {fileID: 12800000, guid: 002a97d6335174442886de5442ae845e, type: 3}
+  - {fileID: 12800000, guid: 011452379e4c75146bebe75ccec005ee, type: 3}
+  - {fileID: 12800000, guid: 90d958e7ca51c6945a37e3148e78dab2, type: 3}
+  - {fileID: 12800000, guid: a054f91897679fc478aa0448af599837, type: 3}
+  - {fileID: 12800000, guid: d09af499cded07d4381ac5360ac7a24e, type: 3}
+  - {fileID: 12800000, guid: c005f20a664f93c4982f36e6e6e81659, type: 3}
+  - {fileID: 12800000, guid: 202b345ae7862964383e85215286bfe9, type: 3}
+  - {fileID: 12800000, guid: a0c9785b79bcbac428446148ec742a84, type: 3}
+  - {fileID: 12800000, guid: c0b3207baa5a7a84abd95e99a237e34f, type: 3}
+  - {fileID: 12800000, guid: 1004e19c7b44a6d4288bab7a91f2a36b, type: 3}
+  - {fileID: 12800000, guid: e0ec8ead572b6c4478270396e8bed67e, type: 3}
+  - {fileID: 12800000, guid: 209d21ce2db66094b8415b1f95c2d60d, type: 3}
+  - {fileID: 12800000, guid: 100ccfeed210c1549aa369e60e978197, type: 3}
+  - {fileID: 12800000, guid: 5033203fa830a934bbe5b8cda257d458, type: 3}
+  - {fileID: 12800000, guid: 309aa26f1e4a6514da147fa904d17a0a, type: 3}
+  - {fileID: 12800000, guid: c07b6fdfe2ba8244989d35362c3b2af3, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

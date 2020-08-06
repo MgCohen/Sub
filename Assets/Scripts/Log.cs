@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Data/Log")]
 public class Log : ScriptableObject
 {
-    public GameObject source;
+    public string logSource;
     public Vector2 logPosition;
     public int logTime;
 
@@ -22,16 +22,21 @@ public class Log : ScriptableObject
     [SerializeField]
     public List<Entry> entries = new List<Entry>();
 
-    [ContextMenu("Get Text")]
     public string GetText()
     {
         string text = "";
         foreach(var e in entries)
         {
-            text += e.source + ": " + e.text + "\n";
+            text += e.source + ": " + e.text;
+            if (e != entries[entries.Count - 1]) text += "\n \n";
         }
-        Debug.Log(text);
         return text;
+    }
+
+    [ContextMenu("Call")]
+    public void Call()
+    {
+        TextScreen.SetLog(this);
     }
 
 

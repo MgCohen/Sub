@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3165e193eb5918a418cf45531d5b2976, type: 3}
   m_Name: New Log
   m_EditorClassIdentifier: 
-  source: {fileID: 0}
-  logPosition: {x: 0, y: 0}
-  logTime: 4
+  logSource: USS YOU
+  logPosition: {x: 5, y: 14}
+  logTime: 16
   completionRate: 0
   entries:
   - source: Captao
